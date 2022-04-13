@@ -1,3 +1,0 @@
-Tutte le funzionalità richieste sono presenti e funzionanti.
-
-Ottima idea il mostrare le icone per i primi 10 secondi e buona esecuzione. Attenzione che if(s==11) (riga 20) ritorna true ogni minuto quando i secondi vanno a 11, girando tutte le caselle (e siccome è usato .toggle() si girano anche quelle già trovate). Bisognerebbe aggiungere nell’if una condizione che limita il controllo al minuto 0, quindi sarebbe giusto scrivere if(s == 11 && m == 0 && h == 0).
