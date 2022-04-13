@@ -17,8 +17,8 @@ function startTimer() {
     interval = setInterval(function () {
         document.getElementById("timer").innerHTML = h + " h " + m + " m " + s + " s";
         s++;
-        if (s == 11) {
-            //mostra le icone per i primi 10 secondi 
+        if (s == 6) {
+            //mostra le icone per i primi 5 secondi 
             for (var i = 0; i < arrayAnimali.length; i++) {
                 document.getElementsByClassName("icon")[i].classList.toggle("show");
             }
@@ -84,7 +84,7 @@ function startGame() {
         element.className = "icon show";
         document.getElementById("griglia").appendChild(box).appendChild(element);
         element.innerHTML = arrayShuffle[i];
-        
+
 
     }
 
@@ -102,17 +102,6 @@ function startGame() {
 function displayIcon() {
     var icon = document.getElementsByClassName("icon");
     var icons = [...icon];
-
-    /*
-    var icon = document.getElementsByClassName("icon");
-    var icons = [...icon];
-    è uguale a 
-    var icons = document.getElementsByClassName("icon");
-    //var icons = [...icon];
-    è un operatore che serve per passare un array come argomento:
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax 
-    https://www.tutorialspoint.com/es6/es6_operators.htm (cerca spread nella pagina)
-    */
 
     //mette/toglie la classe show
     this.classList.toggle("show");
